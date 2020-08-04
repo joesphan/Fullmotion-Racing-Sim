@@ -15,11 +15,13 @@ Somewhat accurate bump simulation
    
 Compatibility across games
 
- Inspiration:
- https://www.xsimulator.net/community/threads/flypt-6dof-brushless-diy-actuators.10799/
-  Problems
-    Too expensive for my taste
-    Motors cost $120 a piece, they need 6 of them
-  Good
-    I like the design, it simplifies the design of moving in all of the axis
-    Easy calculations, all based on triangulation
+## Inspiration:
+https://www.xsimulator.net/community/threads/flypt-6dof-brushless-diy-actuators.10799/
+Problems:
+  Too expensive for my taste
+  Motors cost $120 a piece, they need 6 of them
+Good:
+  I like the design, it simplifies the design of moving in all of the axis
+  Easy calculations, all based on triangulation
+Better:
+  Using the actuator layout, I think I can implment a pneumatic air system. As long as my HFT compressor can keep up with air demands, this shouldn't be an issue.
