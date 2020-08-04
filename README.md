@@ -49,11 +49,14 @@ Electronics:
 * Altera ep2c5t144C8 for triangulation calculations
 * Pneumatic solenoids
 * Custom driver board
+ 
 Software:
 * Figure out how to grab data from BeamNG, either by simulating a controller, or directly grabbing lua
 * FPGA dev, find the equations for caluclating triangle based on the input data
+ 
 Hardware:
 * DIY 3" pipe as pneumatic cylinders
+ 
 Calculations:
 * lengths of actuators for a equalateral triangle seat base of 1m sides
   * tan(20) = ~14", I will make it 24"
