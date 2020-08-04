@@ -25,3 +25,12 @@ https://www.xsimulator.net/community/threads/flypt-6dof-brushless-diy-actuators.
   * Easy calculations, all based on triangulation
 * Better
   * Using the actuator layout, I think I can implment a pneumatic air system. As long as my HFT compressor can keep up with air demands, this shouldn't be an issue.
+
+## Ideas
+* Use FPGA instead of microcontroller for processing, for lowest latency
+* Serial port communication
+* Race controls
+  * Ebay ricer steering wheel and seat
+  * Junkyard throttle body and accelerator pedal
+  * Junkyard brake and clutch booster
+  * Accurate feel H pattern shifter
