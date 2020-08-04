@@ -2,7 +2,7 @@
 This is a dream project of mine for a while. Until I can price out a spec sheet that is under $300, I won't start building any hardware.
 ## Goals
 * 6 axis
-  ![axis](/pics/dof)
+  ![axis](/pics/dof.png)
   
 * At least 20 degrees of motion 
   * +/- 10 degrees, modeled by D series pickup in BeamNG
