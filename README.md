@@ -41,3 +41,16 @@ https://www.simcraft.com/apex-pro-6dof-racing-simulator-chassis-motion-system-ya
   * Junkyard throttle body and accelerator pedal
   * Junkyard brake and clutch booster
   * Accurate feel H pattern shifter
+
+# design log
+## version 1.0
+Calculations:
+* lengths of actuators for a equalateral triangle seat base of 1m sides
+  * tan(20) = ~14", I will make it 24"
+  * 3" air cylinder diameter
+* air compressor spec requirement
+  * cylinder volume: 0.097801 cubic feet
+  * total cylinder volume: .2934 cubic feet
+  * [harbor freight compressor](https://www.harborfreight.com/air-tools-compressors/air-compressors-tanks/8-gallon-2-hp-125-psi-oil-lube-air-compressor-68740.html): 4.5 CFM, derate by 75% to 3.375 CFM
+  * equates to 11.5 full inflates per minute (moving from bottom to top)
+  * [if this becomes a problem I'll pickup this bad boy and a shitty toyota engine](https://www.harborfreight.com/air-tools-compressors/air-compressors-tanks/145-psi-5-hp-twin-cylinder-air-compressor-pump-67698.html) 
