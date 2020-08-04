@@ -26,7 +26,8 @@ https://www.xsimulator.net/community/threads/flypt-6dof-brushless-diy-actuators.
   * Easy calculations, all based on triangulation
 * Better
   * Using the actuator layout, I think I can implment a pneumatic air system. As long as my HFT compressor can keep up with air demands, this shouldn't be an issue.
-
+https://www.simcraft.com/apex-pro-6dof-racing-simulator-chassis-motion-system-yaw-pitch-roll-sway-surge-heave-independent-full-motion-driver-development-full-service/
+* ultimate goal
 ## Ideas
 * Use FPGA instead of microcontroller for processing, for lowest latency
 * Serial port communication
