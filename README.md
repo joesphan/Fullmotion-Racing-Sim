@@ -1,13 +1,18 @@
 # Fullmotion-Racing-Sim
 This is a dream project of mine for a while. Until I can price out a spec sheet that is under $300, I won't start building any hardware.
 ## Goals
-* 6 axis
+* 5 axis
+  * pitch
+  * roll
+  * heave
+  * surge, sort of, simulated through tilting?
+  * sway, same as above
   ![axis](/pics/dof.png)
   
 * At least 20 degrees of motion 
   * +/- 10 degrees, modeled by D series pickup in BeamNG
    
-* Somewhat accurate bump simulation
+* Somewhat accurate bump simulation, very fast acceleration
   * roughly 3,800 m/s/s to simulate a 45 degree ramp (1 x 1 meter) at 100km/h
   * enough to feel back pain
    
@@ -23,6 +28,9 @@ https://www.xsimulator.net/community/threads/flypt-6dof-brushless-diy-actuators.
   * Easy calculations, all based on triangulation
 * Better
   * Using the actuator layout, I think I can implment a pneumatic air system. As long as my HFT compressor can keep up with air demands, this shouldn't be an issue.
+* Cost cuts
+  * No point in yaw for driving, sway and surge can be simulated. This leaves me with only needing 3 actuators
+  
 https://www.simcraft.com/apex-pro-6dof-racing-simulator-chassis-motion-system-yaw-pitch-roll-sway-surge-heave-independent-full-motion-driver-development-full-service/
 * ultimate goal
 ## Ideas
