@@ -12,6 +12,7 @@ This is a dream project of mine for a while. Until I can price out a spec sheet 
    
 * Somewhat accurate bump simulation
   * roughly 3,800 m/s/s to simulate a 45 degree ramp (1 x 1 meter) at 100km/h
+  * enough to feel back pain
    
 * Compatibility across games
 
