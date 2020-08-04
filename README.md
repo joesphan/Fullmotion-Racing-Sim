@@ -1,11 +1,8 @@
 # Fullmotion-Racing-Sim
 This is a dream project of mine for a while. Until I can price out a spec sheet that is under $300, I won't start building any hardware.
 ## Goals
-* 4 axis
-  * pitch (forward backwards)
-  * roll (left right)
-  * rotation?   
-  * bumps (up/down)
+* 6 axis
+  ![axis](/pics/dof)
   
 * At least 20 degrees of motion 
   * +/- 10 degrees, modeled by D series pickup in BeamNG
