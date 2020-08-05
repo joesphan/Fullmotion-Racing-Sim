@@ -42,8 +42,8 @@ https://www.simcraft.com/apex-pro-6dof-racing-simulator-chassis-motion-system-ya
   * Junkyard brake and clutch booster
   * Accurate feel H pattern shifter
 
-# design log
-## version 1.0
+# Brain log
+## version 0.1
 Electronics:
 * usb to rs232
 * Altera ep2c5t144C8 for triangulation calculations
@@ -67,3 +67,23 @@ Calculations:
   * [harbor freight compressor](https://www.harborfreight.com/air-tools-compressors/air-compressors-tanks/8-gallon-2-hp-125-psi-oil-lube-air-compressor-68740.html): 4.5 CFM, derate by 75% to 3.375 CFM
   * equates to 11.5 full inflates per minute (moving from bottom to top)
   * [if this becomes a problem I'll pickup this bad boy and a shitty toyota engine](https://www.harborfreight.com/air-tools-compressors/air-compressors-tanks/145-psi-5-hp-twin-cylinder-air-compressor-pump-67698.html) 
+  
+## version 0.2
+Electronics:
+* RS-232 comms might be no good for latency, need something faster, perhaps ethernet
+* Altera ep2c5t144C8 for triangulation calculations
+* Custom driver board
+ 
+Software:
+* Figure out how to grab data from BeamNG, either by simulating a controller, or directly grabbing lua
+* FPGA dev, find the equations for caluclating triangle based on the input data
+ 
+Hardware:
+* dumping the air compressor idea because of the major lack of portability.
+* HFT corded drills, attached to an ACME rod. There might be issues with 3000RPM not being enough.
+ 
+Calculations:
+* lengths of actuators for a equalateral triangle seat base of 1m sides
+  * tan(20) = ~14", I will make it 24"
+  * 3" air cylinder diameter
+
