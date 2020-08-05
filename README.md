@@ -70,7 +70,7 @@ Calculations:
   
 ## version 0.2
 Electronics:
-* RS-232 comms might be no good for latency, need something faster, perhaps ethernet
+* RS-232
 * Altera ep2c5t144C8 for triangulation calculations
 * Custom driver board
  
