@@ -9,8 +9,8 @@ This is a dream project of mine for a while. Until I can price out a spec sheet 
   * sway, same as above
   ![axis](/pics/dof.png)
   
-* At least 20 degrees of motion 
-  * +/- 10 degrees, modeled by D series pickup in BeamNG
+* At least 45 degrees of motion 
+  * +/- 22.5 degrees, modeled by D series pickup in BeamNG
    
 * Somewhat accurate bump simulation, very fast acceleration
   * roughly 3,800 m/s/s to simulate a 45 degree ramp (1 x 1 meter) at 100km/h
@@ -75,12 +75,12 @@ Electronics:
 * Custom driver board
  
 Software:
-* Figure out how to grab data from BeamNG, either by simulating a controller, or directly grabbing lua
+* C# implementation of sending BeamNG MotionSim data to a serial port, with a UI to control the strength etc.
 * FPGA dev, find the equations for caluclating triangle based on the input data
  
 Hardware:
 * dumping the air compressor idea because of the major lack of portability.
-* HFT corded drills, attached to an ACME rod. There might be issues with 3000RPM not being enough.
+* HFT corded drills attached to a rack and pinion system, or belt drive.
  
 Calculations:
 * lengths of actuators for a equalateral triangle seat base of 1m sides
