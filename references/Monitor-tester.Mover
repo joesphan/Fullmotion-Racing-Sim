@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLYPT_MOVER Version="2.9.9">
+  <MAIN>
+    <Location>678,422</Location>
+  </MAIN>
+  <OPTIONS>
+    <chkMinimize>False</chkMinimize>
+    <chkHighPrecision>False</chkHighPrecision>
+    <nudCalculationRate>2</nudCalculationRate>
+    <nudFilterTime>2</nudFilterTime>
+    <nudSourceTime>5</nudSourceTime>
+    <nudOutputTime>5</nudOutputTime>
+    <sourceHotKey>Alt+O</sourceHotKey>
+    <outputHotKey>Alt+S</outputHotKey>
+    <increaseRigGainHotKey>Alt+I</increaseRigGainHotKey>
+    <decreaseRigGainHotKey>Alt+D</decreaseRigGainHotKey>
+  </OPTIONS>
+  <SOURCE>
+    <Type>Mover.Sources.UDP.BeamNG</Type>
+    <Name>SOURCE :: BEAMNG.DRIVE (UDP)</Name>
+    <Location>1247,345</Location>
+    <Size>550,550</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <PNLOptions.NUDForwardSimPort>4446</PNLOptions.NUDForwardSimPort>
+      <PNLOptions.NUDSway>0</PNLOptions.NUDSway>
+      <PNLOptions.NUDHeave>0</PNLOptions.NUDHeave>
+      <PNLOptions.NUDForwardGaugePort>4445</PNLOptions.NUDForwardGaugePort>
+      <PNLOptions.NUDSurge>0</PNLOptions.NUDSurge>
+      <PNLOptions.NUDGaugePort>4443</PNLOptions.NUDGaugePort>
+      <PNLOptions.NUDSimPort>4444</PNLOptions.NUDSimPort>
+      <TXTUniqueName>2</TXTUniqueName>
+      <TXTName>SOURCE :: BEAMNG.DRIVE (UDP)</TXTName>
+      <SHInputValues.chkShowHide>True</SHInputValues.chkShowHide>
+      <SHOptions.chkShowHide>True</SHOptions.chkShowHide>
+      <PNLOptions.CHKForwardSimUDP>False</PNLOptions.CHKForwardSimUDP>
+      <PNLOptions.CHKForwardGaugeUDP>False</PNLOptions.CHKForwardGaugeUDP>
+      <CHKAutoConnect>False</CHKAutoConnect>
+    </CONTROLS>
+  </SOURCE>
+  <VIEWER_GRAPHIC>
+    <Type>Mover.Viewers.ViewGraphics</Type>
+    <Name>GRAPHICS VIEWER</Name>
+    <Location>1309,0</Location>
+    <Size>602,626</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <nudHScale>30</nudHScale>
+      <nudVScale>4</nudVScale>
+      <TXTUniqueName>3</TXTUniqueName>
+      <TXTName>GRAPHICS VIEWER</TXTName>
+      <shInputSelection.chkShowHide>False</shInputSelection.chkShowHide>
+      <tvInputSelection>
+        <item>SOURCE :: BEAMNG.DRIVE (UDP).Pitch position</item>
+      </tvInputSelection>
+    </CONTROLS>
+  </VIEWER_GRAPHIC>
+  <VIEWER_GRAPHIC>
+    <Type>Mover.Viewers.ViewGraphics</Type>
+    <Name>GRAPHICS VIEWER (1)</Name>
+    <Location>1306,450</Location>
+    <Size>602,626</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <nudHScale>33.333</nudHScale>
+      <nudVScale>4</nudVScale>
+      <TXTUniqueName>4</TXTUniqueName>
+      <TXTName>GRAPHICS VIEWER (1)</TXTName>
+      <shInputSelection.chkShowHide>False</shInputSelection.chkShowHide>
+      <tvInputSelection>
+        <item>SOURCE :: BEAMNG.DRIVE (UDP).Roll position</item>
+      </tvInputSelection>
+    </CONTROLS>
+  </VIEWER_GRAPHIC>
+  <Z_ORDER>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </Z_ORDER>
+</FLYPT_MOVER>

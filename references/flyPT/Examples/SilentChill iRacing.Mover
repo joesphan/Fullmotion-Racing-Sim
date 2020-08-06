@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLYPT_MOVER Version="2.9.0">
+  <MAIN>
+    <chkHighPrecision>False</chkHighPrecision>
+    <nudCalculationRate>2</nudCalculationRate>
+    <nudFilterTime>5</nudFilterTime>
+    <nudSourceTime>6</nudSourceTime>
+    <nudOutputTime>6</nudOutputTime>
+    <sourceHotKey>Alt+S</sourceHotKey>
+    <outputHotKey>Alt+O</outputHotKey>
+  </MAIN>
+  <SOURCE>
+    <Type>Mover.Sources.MMF.IRacing</Type>
+    <Name>SOURCE :: IRACING (MMF + DLL)</Name>
+    <Location>140,187</Location>
+    <Size>360,550</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <TXTUniqueName>4</TXTUniqueName>
+      <TXTName>SOURCE :: IRACING (MMF + DLL)</TXTName>
+      <SHInputValues.chkShowHide>True</SHInputValues.chkShowHide>
+      <CHKAutoConnect>True</CHKAutoConnect>
+    </CONTROLS>
+  </SOURCE>
+  <POSE>
+    <Type>Mover.Poses.AdvancedPoseFromMotion</Type>
+    <Name>iRacing</Name>
+    <Location>560,635</Location>
+    <Size>1344,372</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <pnlPitch.nudSurgeInPitchOutGain>0.200</pnlPitch.nudSurgeInPitchOutGain>
+      <pnlPitch.nudPitchOutGain>1</pnlPitch.nudPitchOutGain>
+      <pnlPitch.nudPitchInGain>-1.400</pnlPitch.nudPitchInGain>
+      <pnlPitch.nudPitchRange>22</pnlPitch.nudPitchRange>
+      <pnlRoll.nudSwayInRollOutGain>0.200</pnlRoll.nudSwayInRollOutGain>
+      <pnlRoll.nudRollOutGain>1</pnlRoll.nudRollOutGain>
+      <pnlRoll.nudRollInGain>1.400</pnlRoll.nudRollInGain>
+      <pnlRoll.nudRollRange>22</pnlRoll.nudRollRange>
+      <pnlYaw.nudYawOutGain>1</pnlYaw.nudYawOutGain>
+      <pnlYaw.nudYawInGain>1</pnlYaw.nudYawInGain>
+      <pnlYaw.nudYawRange>15</pnlYaw.nudYawRange>
+      <pnlHeave.nudHeaveOutGain>1</pnlHeave.nudHeaveOutGain>
+      <pnlHeave.nudHeaveInGain>7</pnlHeave.nudHeaveInGain>
+      <pnlHeave.nudHeaveRange>125</pnlHeave.nudHeaveRange>
+      <pnlSurge.nudSurgeOutGain>1</pnlSurge.nudSurgeOutGain>
+      <pnlSurge.nudSurgeInGain>9</pnlSurge.nudSurgeInGain>
+      <pnlSurge.nudSurgeRange>125</pnlSurge.nudSurgeRange>
+      <pnlSway.nudSwayOutGain>1</pnlSway.nudSwayOutGain>
+      <pnlSway.nudSwayInGain>9</pnlSway.nudSwayInGain>
+      <pnlSway.nudSwayRange>125</pnlSway.nudSwayRange>
+      <pnlPitch.afcSurgeInPitchFilter.txtFilterText>EMALP(EMALP(VALUE;300);300)</pnlPitch.afcSurgeInPitchFilter.txtFilterText>
+      <pnlPitch.afcPitchFilter.txtFilterText>LOGISTIC(EMALP(VALUE;25);15;1)</pnlPitch.afcPitchFilter.txtFilterText>
+      <pnlRoll.afcSwayInRollFilter.txtFilterText>EMALP(EMALP(VALUE;300);300)</pnlRoll.afcSwayInRollFilter.txtFilterText>
+      <pnlRoll.afcRollFilter.txtFilterText>LOGISTIC(EMALP(VALUE;25);15;1)</pnlRoll.afcRollFilter.txtFilterText>
+      <pnlYaw.afcYawFilter.txtFilterText>EMALP(EMALP(LOGISTIC(CUBIC3(VALUE;0.000150);15;1);300);300)</pnlYaw.afcYawFilter.txtFilterText>
+      <pnlHeave.afcHeaveFilter.txtFilterText>EMABS(EMALP(VALUE;25);30;100)</pnlHeave.afcHeaveFilter.txtFilterText>
+      <pnlSurge.afcSurgeFilter.txtFilterText>EMALP(EMAHP(VALUE;600.000);200)</pnlSurge.afcSurgeFilter.txtFilterText>
+      <pnlSway.afcSwayFilter.txtFilterText>EMALP(EMAHP(VALUE;500.000);200.000)</pnlSway.afcSwayFilter.txtFilterText>
+      <TXTUniqueName>8</TXTUniqueName>
+      <TXTName>iRacing</TXTName>
+      <SHPoseValues.chkShowHide>False</SHPoseValues.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <pnlPitch.chkMixSurgeInPitch>True</pnlPitch.chkMixSurgeInPitch>
+      <pnlPitch.chkPitchManual>False</pnlPitch.chkPitchManual>
+      <pnlRoll.chkMixSwayInRoll>True</pnlRoll.chkMixSwayInRoll>
+      <pnlRoll.chkRollManual>False</pnlRoll.chkRollManual>
+      <pnlYaw.chkYawManual>False</pnlYaw.chkYawManual>
+      <pnlHeave.chkHeaveManual>False</pnlHeave.chkHeaveManual>
+      <pnlSurge.chkSurgeManual>False</pnlSurge.chkSurgeManual>
+      <pnlSway.chkSwayManual>False</pnlSway.chkSwayManual>
+      <chkUseSimToolsOrder>False</chkUseSimToolsOrder>
+      <pnlPitch.ddlPitchValue>Pitch position (º)</pnlPitch.ddlPitchValue>
+      <pnlRoll.ddlRollValue>Roll position (º)</pnlRoll.ddlRollValue>
+      <pnlYaw.ddlYawValue>Yaw speed (º/s)</pnlYaw.ddlYawValue>
+      <pnlHeave.ddlHeaveValue>Vertical acceleration (m/s²)</pnlHeave.ddlHeaveValue>
+      <pnlSurge.ddlSurgeValue>Longitudinal acceleration (m/s²)</pnlSurge.ddlSurgeValue>
+      <pnlSway.ddlSwayValue>Lateral acceleration (m/s²)</pnlSway.ddlSwayValue>
+      <TVInputSelection>
+        <item>SOURCE :: IRACING (MMF + DLL)</item>
+      </TVInputSelection>
+    </CONTROLS>
+  </POSE>
+  <POSE>
+    <Type>Mover.Poses.Suspension</Type>
+    <Name>POSE :: FROM SUSPENSION</Name>
+    <Location>88,490</Location>
+    <Size>800,550</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <NUDWheelbase>2850</NUDWheelbase>
+      <NUDTrack>1550</NUDTrack>
+      <AFCFilter.txtFilterText>EMAHP(VALUE;50.000)</AFCFilter.txtFilterText>
+      <TXTUniqueName>10</TXTUniqueName>
+      <TXTName>POSE :: FROM SUSPENSION</TXTName>
+      <SHPoseValues.chkShowHide>True</SHPoseValues.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <DDLInputType>Suspension travel position (values shown in mm)</DDLInputType>
+      <TVInputSelection>
+        <item>SOURCE :: IRACING (MMF + DLL)</item>
+      </TVInputSelection>
+    </CONTROLS>
+  </POSE>
+  <POSE>
+    <Type>Mover.Poses.AdvancedDOFFromValue</Type>
+    <Name>POSE :: FROM DOF GENERATED BY VALUE</Name>
+    <Location>1068,623</Location>
+    <Size>800,377</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <afcFilter.txtFilterText>GAIN(EMALP(EMAHP(VALUE;100);10);2.000)</afcFilter.txtFilterText>
+      <TXTUniqueName>12</TXTUniqueName>
+      <TXTName>POSE :: FROM DOF GENERATED BY VALUE</TXTName>
+      <SHPoseValues.chkShowHide>True</SHPoseValues.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <ddlDOF>Surge</ddlDOF>
+      <ddlFromValue>Gear</ddlFromValue>
+      <TVInputSelection>
+        <item>SOURCE :: IRACING (MMF + DLL)</item>
+      </TVInputSelection>
+    </CONTROLS>
+  </POSE>
+  <RIG>
+    <Type>Mover.Rigs.LinearHexapod</Type>
+    <Name>RIG :: LINEAR HEXAPOD :: ID15</Name>
+    <Location>238,424</Location>
+    <Size>1352,616</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <PNLActuatorsOutput.nudDefault0>-9999</PNLActuatorsOutput.nudDefault0>
+      <PNLActuatorsOutput.nudDefault1>-9999</PNLActuatorsOutput.nudDefault1>
+      <PNLActuatorsOutput.nudDefault2>-9999</PNLActuatorsOutput.nudDefault2>
+      <PNLActuatorsOutput.nudDefault3>-9999</PNLActuatorsOutput.nudDefault3>
+      <PNLActuatorsOutput.nudDefault4>-9999</PNLActuatorsOutput.nudDefault4>
+      <PNLActuatorsOutput.nudDefault5>-9999</PNLActuatorsOutput.nudDefault5>
+      <NUDMiddle>1160</NUDMiddle>
+      <NUDRigL2>200</NUDRigL2>
+      <NUDRange>225</NUDRange>
+      <NUDRigL4>1500</NUDRigL4>
+      <NUDRigL1>1500</NUDRigL1>
+      <NUDRigL3>250</NUDRigL3>
+      <NUDSway>9999</NUDSway>
+      <NUDPitch>180</NUDPitch>
+      <NUDYaw>180</NUDYaw>
+      <NUDRoll>180</NUDRoll>
+      <NUDCORZ>50</NUDCORZ>
+      <NUDSurge>9999</NUDSurge>
+      <NUDCORY>-250</NUDCORY>
+      <NUDHeave>9999</NUDHeave>
+      <NUDCORX>0</NUDCORX>
+      <NUDActuatorsBitOutput>18</NUDActuatorsBitOutput>
+      <NUDGain>1</NUDGain>
+      <NUDScale>1</NUDScale>
+      <PNLActuatorsOutput.txtKey0>Axis1a</PNLActuatorsOutput.txtKey0>
+      <PNLActuatorsOutput.txtKey1>Axis2a</PNLActuatorsOutput.txtKey1>
+      <PNLActuatorsOutput.txtKey2>Axis3a</PNLActuatorsOutput.txtKey2>
+      <PNLActuatorsOutput.txtKey3>Axis4a</PNLActuatorsOutput.txtKey3>
+      <PNLActuatorsOutput.txtKey4>Axis5a</PNLActuatorsOutput.txtKey4>
+      <PNLActuatorsOutput.txtKey5>Axis6a</PNLActuatorsOutput.txtKey5>
+      <AFCActuatorsFilter.txtFilterText>VALUE</AFCActuatorsFilter.txtFilterText>
+      <AFCPosesFilter.txtFilterText>VALUE</AFCPosesFilter.txtFilterText>
+      <TXTUniqueName>14</TXTUniqueName>
+      <TXTName>RIG :: LINEAR HEXAPOD :: ID15</TXTName>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <SHActuators.chkShowHide>True</SHActuators.chkShowHide>
+      <CHKStayLastPossiblePose>False</CHKStayLastPossiblePose>
+      <CHKAutoGain>False</CHKAutoGain>
+      <TVInputSelection>
+        <item>iRacing</item>
+        <item>POSE :: FROM SUSPENSION</item>
+        <item>POSE :: FROM DOF GENERATED BY VALUE</item>
+      </TVInputSelection>
+    </CONTROLS>
+  </RIG>
+  <DIRECT>
+    <Type>Mover.Directs.SimpleDirect</Type>
+    <Name>SIMPLE DIRECT</Name>
+    <Location>895,57</Location>
+    <Size>880,450</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <nudDefault>0</nudDefault>
+      <nudTo>200</nudTo>
+      <nudFrom>0</nudFrom>
+      <nudActuatorsBitOutput>8</nudActuatorsBitOutput>
+      <afcFilter.txtFilterText>VALUE</afcFilter.txtFilterText>
+      <afcActuatorFilter.txtFilterText>VALUE</afcActuatorFilter.txtFilterText>
+      <txtKey>Wind</txtKey>
+      <TXTUniqueName>13</TXTUniqueName>
+      <TXTName>SIMPLE DIRECT</TXTName>
+      <shActuatorValues.chkShowHide>True</shActuatorValues.chkShowHide>
+      <shInputSelection.chkShowHide>True</shInputSelection.chkShowHide>
+      <ddlValue>Speed (m/s)</ddlValue>
+      <tvInputSelection>
+        <item>SOURCE :: IRACING (MMF + DLL)</item>
+      </tvInputSelection>
+    </CONTROLS>
+  </DIRECT>
+  <OUTPUT>
+    <Type>Mover.Outputs.Serial</Type>
+    <Name>OUTPUT :: SERIAL :: ID3</Name>
+    <Location>874,507</Location>
+    <Size>870,420</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <NUDInterval>1</NUDInterval>
+      <NUDStopTime>0</NUDStopTime>
+      <NUDStartTime>0</NUDStartTime>
+      <TXTStopString>x 0  1000 &lt;13&gt;x 1 1000 &lt;13&gt;</TXTStopString>
+      <TXTSendString>x 0 &lt;Axis6a&gt; 5000 &lt;13&gt;x 1 &lt;Axis1a&gt; 5000 &lt;13&gt;</TXTSendString>
+      <TXTStartString>x 0  1000 &lt;13&gt;x 1 1000 &lt;13&gt;</TXTStartString>
+      <TXTUniqueName>14</TXTUniqueName>
+      <TXTName>OUTPUT :: SERIAL :: ID3</TXTName>
+      <SHDebug.chkShowHide>True</SHDebug.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <CHKAutoConnect>False</CHKAutoConnect>
+      <DDLParity>None</DDLParity>
+      <DDLStopBits>1</DDLStopBits>
+      <DDLDataBits>8</DDLDataBits>
+      <DDLBaudRate>115200</DDLBaudRate>
+      <DDLPort>COM1</DDLPort>
+      <DDLTypeOfOutput>Decimal</DDLTypeOfOutput>
+      <TVInputSelection />
+    </CONTROLS>
+  </OUTPUT>
+  <OUTPUT>
+    <Type>Mover.Outputs.Serial</Type>
+    <Name>OUTPUT :: SERIAL :: ID16 1</Name>
+    <Location>938,401</Location>
+    <Size>870,420</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <NUDInterval>1</NUDInterval>
+      <NUDStopTime>0</NUDStopTime>
+      <NUDStartTime>0</NUDStartTime>
+      <TXTStopString>x 0  1000 &lt;13&gt;x 1 1000 &lt;13&gt;</TXTStopString>
+      <TXTSendString>x 0 &lt;Axis2a&gt; 5000 &lt;13&gt;x 1 &lt;Axis3a&gt; 5000 &lt;13&gt;</TXTSendString>
+      <TXTStartString>x 0  1000 &lt;13&gt;x 1 1000 &lt;13&gt;</TXTStartString>
+      <TXTUniqueName>15</TXTUniqueName>
+      <TXTName>OUTPUT :: SERIAL :: ID16 1</TXTName>
+      <SHDebug.chkShowHide>True</SHDebug.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <CHKAutoConnect>False</CHKAutoConnect>
+      <DDLParity>None</DDLParity>
+      <DDLStopBits>1</DDLStopBits>
+      <DDLDataBits>8</DDLDataBits>
+      <DDLBaudRate>115200</DDLBaudRate>
+      <DDLPort>COM2</DDLPort>
+      <DDLTypeOfOutput>Decimal</DDLTypeOfOutput>
+      <TVInputSelection />
+    </CONTROLS>
+  </OUTPUT>
+  <OUTPUT>
+    <Type>Mover.Outputs.Serial</Type>
+    <Name>OUTPUT :: SERIAL :: ID17 2</Name>
+    <Location>623,93</Location>
+    <Size>870,420</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <NUDInterval>1</NUDInterval>
+      <NUDStopTime>0</NUDStopTime>
+      <NUDStartTime>0</NUDStartTime>
+      <TXTStopString>x 0  1000 &lt;13&gt;x 1 1000 &lt;13&gt;</TXTStopString>
+      <TXTSendString>x 0 &lt;Axis4a&gt; 5000 &lt;13&gt;x 1 &lt;Axis5a&gt; 5000 &lt;13&gt;</TXTSendString>
+      <TXTStartString>x 0  1000 &lt;13&gt;x 1 1000 &lt;13&gt;</TXTStartString>
+      <TXTUniqueName>16</TXTUniqueName>
+      <TXTName>OUTPUT :: SERIAL :: ID17 2</TXTName>
+      <SHDebug.chkShowHide>True</SHDebug.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <CHKAutoConnect>False</CHKAutoConnect>
+      <DDLParity>None</DDLParity>
+      <DDLStopBits>1</DDLStopBits>
+      <DDLDataBits>8</DDLDataBits>
+      <DDLBaudRate>115200</DDLBaudRate>
+      <DDLPort>COM3</DDLPort>
+      <DDLTypeOfOutput>Decimal</DDLTypeOfOutput>
+      <TVInputSelection />
+    </CONTROLS>
+  </OUTPUT>
+  <OUTPUT>
+    <Type>Mover.Outputs.Serial</Type>
+    <Name>OUTPUT :: SERIAL 3</Name>
+    <Location>367,556</Location>
+    <Size>870,420</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <NUDInterval>1</NUDInterval>
+      <NUDStopTime>0</NUDStopTime>
+      <NUDStartTime>0</NUDStartTime>
+      <TXTStopString></TXTStopString>
+      <TXTSendString>S&lt;Wind&gt;</TXTSendString>
+      <TXTStartString></TXTStartString>
+      <TXTUniqueName>17</TXTUniqueName>
+      <TXTName>OUTPUT :: SERIAL 3</TXTName>
+      <SHDebug.chkShowHide>True</SHDebug.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <CHKAutoConnect>False</CHKAutoConnect>
+      <DDLParity>None</DDLParity>
+      <DDLStopBits>1</DDLStopBits>
+      <DDLDataBits>8</DDLDataBits>
+      <DDLBaudRate>115200</DDLBaudRate>
+      <DDLPort>COM15</DDLPort>
+      <DDLTypeOfOutput>Binary</DDLTypeOfOutput>
+      <TVInputSelection />
+    </CONTROLS>
+  </OUTPUT>
+  <VIEWER_3D>
+    <Type>Mover.Viewers.View3D</Type>
+    <Name>3D VIEWER :: ID5</Name>
+    <Location>2587,288</Location>
+    <Size>585,504</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <TXTUniqueName>18</TXTUniqueName>
+      <TXTName>3D VIEWER :: ID5</TXTName>
+      <ddlRigs>RIG :: LINEAR HEXAPOD :: ID15</ddlRigs>
+    </CONTROLS>
+  </VIEWER_3D>
+  <VIEWER_GRAPHIC>
+    <Type>Mover.Viewers.ViewGraphics</Type>
+    <Name>GRAPHICS VIEWER :: ID10</Name>
+    <Location>2439,227</Location>
+    <Size>882,626</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <nudHScale>33.333</nudHScale>
+      <nudVScale>1</nudVScale>
+      <TXTUniqueName>19</TXTUniqueName>
+      <TXTName>GRAPHICS VIEWER :: ID10</TXTName>
+      <shInputSelection.chkShowHide>True</shInputSelection.chkShowHide>
+      <tvInputSelection />
+    </CONTROLS>
+  </VIEWER_GRAPHIC>
+  <Z_ORDER>
+    <item>13</item>
+    <item>18</item>
+    <item>19</item>
+    <item>17</item>
+    <item>4</item>
+    <item>14</item>
+    <item>15</item>
+    <item>16</item>
+    <item>14</item>
+    <item>10</item>
+    <item>12</item>
+    <item>8</item>
+  </Z_ORDER>
+</FLYPT_MOVER>

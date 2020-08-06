@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FLYPT_MOVER Version="2.9.3">
+  <MAIN>
+    <chkHighPrecision>True</chkHighPrecision>
+    <nudCalculationRate>2</nudCalculationRate>
+    <nudFilterTime>2</nudFilterTime>
+    <nudSourceTime>4</nudSourceTime>
+    <nudOutputTime>4</nudOutputTime>
+    <sourceHotKey>Alt+S</sourceHotKey>
+    <outputHotKey>Alt+O</outputHotKey>
+  </MAIN>
+  <SOURCE>
+    <Type>Mover.Sources.MMF.AssettoCorsa</Type>
+    <Name>SOURCE :: ASSETTO CORSA (MMF)</Name>
+    <Location>12,9</Location>
+    <Size>360,550</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <TXTUniqueName>1</TXTUniqueName>
+      <TXTName>SOURCE :: ASSETTO CORSA (MMF)</TXTName>
+      <SHInputValues.chkShowHide>True</SHInputValues.chkShowHide>
+      <CHKAutoConnect>False</CHKAutoConnect>
+    </CONTROLS>
+  </SOURCE>
+  <POSE>
+    <Type>Mover.Poses.Suspension</Type>
+    <Name>POSE :: FROM SUSPENSION</Name>
+    <Location>377,11</Location>
+    <Size>800,550</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <NUDWheelbase>2690</NUDWheelbase>
+      <NUDTrack>1700</NUDTrack>
+      <AFCFilter.txtFilterText>GAIN(EMAHP(VALUE;10);0.600)</AFCFilter.txtFilterText>
+      <TXTUniqueName>5</TXTUniqueName>
+      <TXTName>POSE :: FROM SUSPENSION</TXTName>
+      <SHPoseValues.chkShowHide>True</SHPoseValues.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <DDLInputType>Suspension travel position (values shown in mm)</DDLInputType>
+      <TVInputSelection>
+        <item>SOURCE :: ASSETTO CORSA (MMF)</item>
+      </TVInputSelection>
+    </CONTROLS>
+  </POSE>
+  <POSE>
+    <Type>Mover.Poses.AdvancedDOFFromValue</Type>
+    <Name>POSE :: FROM GEAR SHIFT</Name>
+    <Location>1459,1011</Location>
+    <Size>800,377</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <afcFilter.txtFilterText>GAIN(EMAHP(SUB(VALUE;10);100);0.035)</afcFilter.txtFilterText>
+      <TXTUniqueName>6</TXTUniqueName>
+      <TXTName>POSE :: FROM GEAR SHIFT</TXTName>
+      <SHPoseValues.chkShowHide>True</SHPoseValues.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <ddlDOF>Pitch</ddlDOF>
+      <ddlFromValue>Gear</ddlFromValue>
+      <TVInputSelection>
+        <item>SOURCE :: ASSETTO CORSA (MMF)</item>
+      </TVInputSelection>
+    </CONTROLS>
+  </POSE>
+  <POSE>
+    <Type>Mover.Poses.BasicPoseFromMotion</Type>
+    <Name>BASIC POSE :: FROM MOTION</Name>
+    <Location>912,533</Location>
+    <Size>1162,476</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <BFCSurgeInPitch.CTRLDeadzone.NUD>1</BFCSurgeInPitch.CTRLDeadzone.NUD>
+      <BFCSurgeInPitch.CTRLSmooth.NUD>250</BFCSurgeInPitch.CTRLSmooth.NUD>
+      <BFCSurgeInPitch.CTRLWashout.NUD>200</BFCSurgeInPitch.CTRLWashout.NUD>
+      <BFCSurgeInPitch.CTRLIntensity.NUD>0.200</BFCSurgeInPitch.CTRLIntensity.NUD>
+      <BFCSurgeInPitch.CTRLRange.NUD>7</BFCSurgeInPitch.CTRLRange.NUD>
+      <BFCSwayInRoll.CTRLDeadzone.NUD>1</BFCSwayInRoll.CTRLDeadzone.NUD>
+      <BFCSwayInRoll.CTRLSmooth.NUD>250</BFCSwayInRoll.CTRLSmooth.NUD>
+      <BFCSwayInRoll.CTRLWashout.NUD>200</BFCSwayInRoll.CTRLWashout.NUD>
+      <BFCSwayInRoll.CTRLIntensity.NUD>0.200</BFCSwayInRoll.CTRLIntensity.NUD>
+      <BFCSwayInRoll.CTRLRange.NUD>7</BFCSwayInRoll.CTRLRange.NUD>
+      <BFCYaw.CTRLDeadzone.NUD>130</BFCYaw.CTRLDeadzone.NUD>
+      <BFCYaw.CTRLSmooth.NUD>10</BFCYaw.CTRLSmooth.NUD>
+      <BFCYaw.CTRLWashout.NUD>200</BFCYaw.CTRLWashout.NUD>
+      <BFCYaw.CTRLIntensity.NUD>0.0001</BFCYaw.CTRLIntensity.NUD>
+      <BFCYaw.CTRLRange.NUD>15</BFCYaw.CTRLRange.NUD>
+      <BFCRoll.CTRLDeadzone.NUD>100</BFCRoll.CTRLDeadzone.NUD>
+      <BFCRoll.CTRLSmooth.NUD>100</BFCRoll.CTRLSmooth.NUD>
+      <BFCRoll.CTRLWashout.NUD>1000</BFCRoll.CTRLWashout.NUD>
+      <BFCRoll.CTRLIntensity.NUD>1</BFCRoll.CTRLIntensity.NUD>
+      <BFCRoll.CTRLRange.NUD>7</BFCRoll.CTRLRange.NUD>
+      <BFCPitch.CTRLDeadzone.NUD>100</BFCPitch.CTRLDeadzone.NUD>
+      <BFCPitch.CTRLSmooth.NUD>100</BFCPitch.CTRLSmooth.NUD>
+      <BFCPitch.CTRLWashout.NUD>1000</BFCPitch.CTRLWashout.NUD>
+      <BFCPitch.CTRLIntensity.NUD>1</BFCPitch.CTRLIntensity.NUD>
+      <BFCPitch.CTRLRange.NUD>7</BFCPitch.CTRLRange.NUD>
+      <BFCHeave.CTRLDeadzone.NUD>100</BFCHeave.CTRLDeadzone.NUD>
+      <BFCHeave.CTRLSmooth.NUD>200</BFCHeave.CTRLSmooth.NUD>
+      <BFCHeave.CTRLWashout.NUD>1000</BFCHeave.CTRLWashout.NUD>
+      <BFCHeave.CTRLIntensity.NUD>1</BFCHeave.CTRLIntensity.NUD>
+      <BFCHeave.CTRLRange.NUD>50</BFCHeave.CTRLRange.NUD>
+      <BFCSurge.CTRLDeadzone.NUD>100</BFCSurge.CTRLDeadzone.NUD>
+      <BFCSurge.CTRLSmooth.NUD>1</BFCSurge.CTRLSmooth.NUD>
+      <BFCSurge.CTRLWashout.NUD>1000</BFCSurge.CTRLWashout.NUD>
+      <BFCSurge.CTRLIntensity.NUD>6</BFCSurge.CTRLIntensity.NUD>
+      <BFCSurge.CTRLRange.NUD>150</BFCSurge.CTRLRange.NUD>
+      <BFCSway.CTRLDeadzone.NUD>100</BFCSway.CTRLDeadzone.NUD>
+      <BFCSway.CTRLSmooth.NUD>1</BFCSway.CTRLSmooth.NUD>
+      <BFCSway.CTRLWashout.NUD>1000</BFCSway.CTRLWashout.NUD>
+      <BFCSway.CTRLIntensity.NUD>6</BFCSway.CTRLIntensity.NUD>
+      <BFCSway.CTRLRange.NUD>150</BFCSway.CTRLRange.NUD>
+      <TXTUniqueName>8</TXTUniqueName>
+      <TXTName>BASIC POSE :: FROM MOTION</TXTName>
+      <BFCSurgeInPitch.CHKSmooth>True</BFCSurgeInPitch.CHKSmooth>
+      <BFCSurgeInPitch.CHKWashout>False</BFCSurgeInPitch.CHKWashout>
+      <BFCSurgeInPitch.CHKDeadzone>False</BFCSurgeInPitch.CHKDeadzone>
+      <BFCSurgeInPitch.CHKEnabled>True</BFCSurgeInPitch.CHKEnabled>
+      <BFCSurgeInPitch.CHKInvert>False</BFCSurgeInPitch.CHKInvert>
+      <BFCSwayInRoll.CHKSmooth>True</BFCSwayInRoll.CHKSmooth>
+      <BFCSwayInRoll.CHKWashout>False</BFCSwayInRoll.CHKWashout>
+      <BFCSwayInRoll.CHKDeadzone>False</BFCSwayInRoll.CHKDeadzone>
+      <BFCSwayInRoll.CHKEnabled>True</BFCSwayInRoll.CHKEnabled>
+      <BFCSwayInRoll.CHKInvert>True</BFCSwayInRoll.CHKInvert>
+      <BFCYaw.CHKSmooth>True</BFCYaw.CHKSmooth>
+      <BFCYaw.CHKWashout>False</BFCYaw.CHKWashout>
+      <BFCYaw.CHKDeadzone>True</BFCYaw.CHKDeadzone>
+      <BFCYaw.CHKEnabled>False</BFCYaw.CHKEnabled>
+      <BFCYaw.CHKInvert>False</BFCYaw.CHKInvert>
+      <BFCRoll.CHKSmooth>True</BFCRoll.CHKSmooth>
+      <BFCRoll.CHKWashout>True</BFCRoll.CHKWashout>
+      <BFCRoll.CHKDeadzone>False</BFCRoll.CHKDeadzone>
+      <BFCRoll.CHKEnabled>True</BFCRoll.CHKEnabled>
+      <BFCRoll.CHKInvert>False</BFCRoll.CHKInvert>
+      <BFCPitch.CHKSmooth>True</BFCPitch.CHKSmooth>
+      <BFCPitch.CHKWashout>True</BFCPitch.CHKWashout>
+      <BFCPitch.CHKDeadzone>False</BFCPitch.CHKDeadzone>
+      <BFCPitch.CHKEnabled>True</BFCPitch.CHKEnabled>
+      <BFCPitch.CHKInvert>False</BFCPitch.CHKInvert>
+      <BFCHeave.CHKSmooth>True</BFCHeave.CHKSmooth>
+      <BFCHeave.CHKWashout>False</BFCHeave.CHKWashout>
+      <BFCHeave.CHKDeadzone>False</BFCHeave.CHKDeadzone>
+      <BFCHeave.CHKEnabled>True</BFCHeave.CHKEnabled>
+      <BFCHeave.CHKInvert>False</BFCHeave.CHKInvert>
+      <BFCSurge.CHKSmooth>False</BFCSurge.CHKSmooth>
+      <BFCSurge.CHKWashout>True</BFCSurge.CHKWashout>
+      <BFCSurge.CHKDeadzone>True</BFCSurge.CHKDeadzone>
+      <BFCSurge.CHKEnabled>False</BFCSurge.CHKEnabled>
+      <BFCSurge.CHKInvert>False</BFCSurge.CHKInvert>
+      <BFCSway.CHKSmooth>False</BFCSway.CHKSmooth>
+      <BFCSway.CHKWashout>True</BFCSway.CHKWashout>
+      <BFCSway.CHKDeadzone>True</BFCSway.CHKDeadzone>
+      <BFCSway.CHKEnabled>False</BFCSway.CHKEnabled>
+      <BFCSway.CHKInvert>False</BFCSway.CHKInvert>
+      <SHPoseValues.chkShowHide>True</SHPoseValues.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <TVInputSelection>
+        <item>SOURCE :: ASSETTO CORSA (MMF)</item>
+      </TVInputSelection>
+    </CONTROLS>
+  </POSE>
+  <RIG>
+    <Type>Mover.Rigs.LinearFour</Type>
+    <Name>RIG :: 3DOF WITH 4 LINEAR</Name>
+    <Location>1168,3</Location>
+    <Size>1352,564</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <PNLActuatorsOutput.nudDefault0>0</PNLActuatorsOutput.nudDefault0>
+      <PNLActuatorsOutput.nudDefault1>0</PNLActuatorsOutput.nudDefault1>
+      <PNLActuatorsOutput.nudDefault2>0</PNLActuatorsOutput.nudDefault2>
+      <PNLActuatorsOutput.nudDefault3>0</PNLActuatorsOutput.nudDefault3>
+      <NUDExtraLength>70</NUDExtraLength>
+      <NUDRigL2>840</NUDRigL2>
+      <NUDRigL1>690</NUDRigL1>
+      <NUDRange>50</NUDRange>
+      <NUDActuatorsBitOutput>16</NUDActuatorsBitOutput>
+      <NUDGain>1</NUDGain>
+      <NUDScale>1</NUDScale>
+      <NUDSway>9999</NUDSway>
+      <NUDPitch>180</NUDPitch>
+      <NUDYaw>180</NUDYaw>
+      <NUDRoll>180</NUDRoll>
+      <NUDCORZ>0</NUDCORZ>
+      <NUDSurge>9999</NUDSurge>
+      <NUDCORY>0</NUDCORY>
+      <NUDHeave>9999</NUDHeave>
+      <NUDCORX>0</NUDCORX>
+      <PNLActuatorsOutput.txtKey0>Axis1a</PNLActuatorsOutput.txtKey0>
+      <PNLActuatorsOutput.txtKey1>Axis2a</PNLActuatorsOutput.txtKey1>
+      <PNLActuatorsOutput.txtKey2>Axis3a</PNLActuatorsOutput.txtKey2>
+      <PNLActuatorsOutput.txtKey3>Axis4a</PNLActuatorsOutput.txtKey3>
+      <AFCActuatorsFilter.txtFilterText>EDYNLP(VALUE;0;2)</AFCActuatorsFilter.txtFilterText>
+      <AFCPosesFilter.txtFilterText>VALUE</AFCPosesFilter.txtFilterText>
+      <TXTUniqueName>4</TXTUniqueName>
+      <TXTName>RIG :: 3DOF WITH 4 LINEAR</TXTName>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <SHActuators.chkShowHide>True</SHActuators.chkShowHide>
+      <CHKAutoGain>False</CHKAutoGain>
+      <CHKStayLastPossiblePose>False</CHKStayLastPossiblePose>
+      <TVInputSelection>
+        <item>POSE :: FROM SUSPENSION</item>
+        <item>POSE :: FROM GEAR SHIFT</item>
+        <item>BASIC POSE :: FROM MOTION</item>
+      </TVInputSelection>
+    </CONTROLS>
+  </RIG>
+  <OUTPUT>
+    <Type>Mover.Outputs.Thanos</Type>
+    <Name>OUTPUT :: THANOS</Name>
+    <Location>676,1024</Location>
+    <Size>633,372</Size>
+    <Visible>True</Visible>
+    <CONTROLS>
+      <NUDInterval>1</NUDInterval>
+      <NUDStopTime>0</NUDStopTime>
+      <NUDStartTime>0</NUDStartTime>
+      <TXTStopString></TXTStopString>
+      <TXTSendString>&lt;255&gt;&lt;255&gt;&lt;Axis3a&gt;&lt;Axis4a&gt;&lt;Axis1a&gt;&lt;Axis2a&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;10&gt;&lt;13&gt;</TXTSendString>
+      <TXTStartString></TXTStartString>
+      <TXTUniqueName>4</TXTUniqueName>
+      <TXTName>OUTPUT :: THANOS</TXTName>
+      <SHDebug.chkShowHide>True</SHDebug.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <CHKAutoConnect>False</CHKAutoConnect>
+      <DDLTypeOfOutput>Binary</DDLTypeOfOutput>
+      <DDLActuator8>None</DDLActuator8>
+      <DDLActuato7>None</DDLActuato7>
+      <DDLActuator6>None</DDLActuator6>
+      <DDLActuator5>None</DDLActuator5>
+      <DDLActuator4>&lt;Axis2a&gt;</DDLActuator4>
+      <DDLActuator3>&lt;Axis1a&gt;</DDLActuator3>
+      <DDLActuator2>&lt;Axis4a&gt;</DDLActuator2>
+      <DDLActuator1>&lt;Axis3a&gt;</DDLActuator1>
+      <DDLPort></DDLPort>
+      <DDLRig>RIG :: 3DOF WITH 4 LINEAR</DDLRig>
+      <TVInputSelection />
+    </CONTROLS>
+  </OUTPUT>
+  <OUTPUT>
+    <Type>Mover.Outputs.Serial</Type>
+    <Name>OUTPUT :: SERIAL</Name>
+    <Location>845,490</Location>
+    <Size>870,420</Size>
+    <Visible>False</Visible>
+    <CONTROLS>
+      <NUDInterval>1</NUDInterval>
+      <NUDStopTime>0</NUDStopTime>
+      <NUDStartTime>0</NUDStartTime>
+      <TXTStopString></TXTStopString>
+      <TXTSendString>&lt;255&gt;&lt;255&gt;&lt;Axis3a&gt;&lt;Axis4a&gt;&lt;Axis1a&gt;&lt;Axis2a&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;0&gt;&lt;10&gt;&lt;13&gt;</TXTSendString>
+      <TXTStartString></TXTStartString>
+      <TXTUniqueName>7</TXTUniqueName>
+      <TXTName>OUTPUT :: SERIAL</TXTName>
+      <SHDebug.chkShowHide>True</SHDebug.chkShowHide>
+      <SHInputSelection.chkShowHide>True</SHInputSelection.chkShowHide>
+      <CHKAutoConnect>False</CHKAutoConnect>
+      <DDLParity>None</DDLParity>
+      <DDLStopBits>1</DDLStopBits>
+      <DDLDataBits>8</DDLDataBits>
+      <DDLBaudRate>250000</DDLBaudRate>
+      <DDLPort></DDLPort>
+      <DDLTypeOfOutput>Binary</DDLTypeOfOutput>
+      <TVInputSelection />
+    </CONTROLS>
+  </OUTPUT>
+  <Z_ORDER>
+    <item>7</item>
+    <item>4</item>
+    <item>4</item>
+    <item>1</item>
+    <item>5</item>
+    <item>6</item>
+    <item>8</item>
+  </Z_ORDER>
+</FLYPT_MOVER>
