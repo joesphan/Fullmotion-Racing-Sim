@@ -72,20 +72,11 @@ The non-full voltage swing across the 10 ohm is caused by the limitation of the 
 
 #### Power supply
 
-To test the stall current of the 775 motor, I had a set of pliers locked on the axle and gave it power. At 6V, the motor drew roughly 4 amps. At 12V, the motor pegged my multimeter at 10 amps. Just by the sound test, 12V creates too many rpms for the 775 motor.
+The drill is a 120V drill. Running it on 12V DC provides good Locking torque, yet lacks power to come out of a locked stall.
 
-This sets the premises for the power supply. 
+A voltage doubler circuit would be utilized to boost the voltage to a decent amount.
 
-- My go-to is an ATX power supply, but given the ioMega StorCenter metal case I will be using, that would not fit. 
-- A typical Dell/HP 19.5V laptop power adapter seems good, but it only puts out a few amps. The motor will trip the overcurrent protection within seconds of gameplay
-- My only choice left is to build a custom power supply using a chunky 14.5V/1.6A transformer I had laying around
-
-This at a glance seems like the worst choice, but hear me out. 
-
-- The transformer itself has no circuit protection, this allows short term high current bursts of energy
-- I can use capacitors to smooth out the current draw
-
-To get an accurate simulation, the inductance of the transformer was measured via frequency generator and oscilloscope
+##### Transform calculations
 
 ![TrafoInductanceTest](/pics/TrafoInductanceTest.png)
 
@@ -103,18 +94,15 @@ Calculations
 
 ![formula](https://render.githubusercontent.com/render/math?math=L=\frac{300ohm}{2%20\pi%20103.1hz}=.463H)
 
-
-At about 14 amps, a 10,000uF capacitor will provide a 6v swing signal. Good enough for the girls I go out with
+##### Voltage doubler and filter simulation
 
 ![PowerSupplySim](/pics/PowerSupplySim.png)
 
-At 2 amps, the signal is a 1V swing. Nice!
+[Complete Schematic (pdf)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
 
-![PowerSupplySimLowCurrent](/pics/PowerSupplySimLowCurrent.png)
+[Complete Schematic (diptrace)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.dch)
 
-Measurements reflect the worst case scenarios 
-
-[Complete Schematic](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
+Note: 12V net port is not actually 12V
 
 ## Mechanics
 
