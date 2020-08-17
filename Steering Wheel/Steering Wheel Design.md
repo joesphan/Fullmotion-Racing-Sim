@@ -1,12 +1,8 @@
 # Custom Steering Wheel
 
-Since COVID, I have decided to revert to becoming a degenerate and moving in with my parents again. This means I can't hog space for the fullmotion sim. That being said, I will be building the wheel first.
-
 ### Electronics
 
-Theoretically any wheel would work, the one I have on hand is a Madcatz xbox wheel. This xbox wheel has all the buttons, a vibration motor built in, is well built, and its weighted decently well. It also has somewhat of a shaft and journal bearing setup, making it easy to integrate my own system.
-
-I have decoded the spaghetti of wiring coming from the wheel. The buttons are all active low. The color coding is as follows:
+MadCatz xbox wheel decoding:
 
 |             Color/Stripe              |         Function         |
 | :-----------------------------------: | :----------------------: |
@@ -36,7 +32,10 @@ I have decoded the spaghetti of wiring coming from the wheel. The buttons are al
 
 ### Theory of Operation
 
-It took a while to gather up all the research required to put together the required libraries and hardware required to pull this off. USB and HID in general are both a big pain. Luckily I found [this library](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary). Unluckily, I had already bought a STM32 and the library was only good for the 32u4. The general idea flowchart is something like this:
+-Atmega 32u4
+-[FFB Library](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary) (thanks!)
+-drill motor for "direct drive"
+-old 2 bay NAS chassis for housing
 
 ```sequence
 PC-Atmega32u4:FFB data
@@ -64,7 +63,7 @@ The extra transistors tacked on are to create a 12V gate drive.
 
 I simulated the circuit in [circuitmod](https://sourceforge.net/projects/circuitmod/). Although I had access to MultiSim through my uni, the mentioned software is more accessible to most people and is fine.
 
-![HBridgeSimulation](\pics\HBridgeSimulation.png)
+![HBridgeSimulation](/pics/HBridgeSimulation.png)
 
 The non-full voltage swing across the 10 ohm is caused by the limitation of the simulator's mosfet model. Putting another one in parallel solves this issue, by using a more appropriate MOSFET in the final design will be a better solution
 
@@ -85,7 +84,7 @@ This at a glance seems like the worst choice, but hear me out.
 
 To get an accurate simulation, the inductance of the transformer was measured via frequency generator and oscilloscope
 
-![TrafoInductanceTest](\pics\TrafoInductanceTest.png)
+![TrafoInductanceTest](/pics/TrafoInductanceTest.png)
 
 The circuit consisted of the transformer (secondary open) and a 100 ohm resistor in series. The smaller waveform is the measurement across the resistor while a signal was applied.
 $$
@@ -110,17 +109,15 @@ $$
 
 At about 14 amps, a 10,000uF capacitor will provide a 6v swing signal. Good enough for the girls I go out with
 
-![PowerSupplySim](\pics\PowerSupplySim.png)
+![PowerSupplySim](/pics/PowerSupplySim.png)
 
 At 2 amps, the signal is a 1V swing. Nice!
 
-![PowerSupplySimLowCurrent](C:\Users\joesp\Desktop\fullmotion racing sim\pics\PowerSupplySimLowCurrent.png)
+![PowerSupplySimLowCurrent](/pics/PowerSupplySimLowCurrent.png)
 
 These measurements are taken at the worst case scenario. In reality, it will be PWM'd to only 8-10V, the motor is rated for 6V. 
 
-Here is the complete schematic. Diptrace files should be in their respective directories. Because I'm going to be building this on a perfboard, a PCB will not be generated. If someone wants to do that, do a pull request.
-
-![image-20200816172851211](C:\Users\joesp\AppData\Roaming\Typora\typora-user-images\image-20200816172851211.png)
+[Complete Schematic](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
 
 ## Mechanics
 
