@@ -48,6 +48,12 @@ Inside the ATmega32u4, the code will go something like this:
 
 ### Schematics
 
+[Complete Schematic (pdf)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
+
+[Complete Schematic (diptrace)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.dch)
+
+Note: 12V net port is not actually 12V
+
 #### H bridge Driver
 
 This is a basic H bridge driver, supports PWM. Only thing is that there is absolutely no circuit protection, so should both analog pwm inputs be active, the HEXFETS will be no more.
@@ -87,12 +93,6 @@ Calculations
 ##### Voltage doubler and filter simulation
 
 ![PowerSupplySim](/pics/PowerSupplySim.png)
-
-[Complete Schematic (pdf)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
-
-[Complete Schematic (diptrace)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.dch)
-
-Note: 12V net port is not actually 12V
 
 ## Mechanics
 
