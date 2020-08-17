@@ -40,21 +40,11 @@ MadCatz xbox wheel decoding:
 
 -old 2 bay NAS chassis for housing
 
-```sequence
-PC-Atmega32u4:FFB data
-Atmega32u4--PC:Steering wheel angle, buttons
-Atmega32u4-Motor Driver:Motor direction, force
-potentiometer-Atmega32u4:
-```
+![diagram](/pics/diag1.png)
 
 Inside the ATmega32u4, the code will go something like this:
 
-```sequence
-USB Interface-USB Library:USB
-USB Library-ArduinoJoystickWithFFBLibrary:HID/PID FFB Data
-ArduinoJoystickWithFFBLibrary--USB Library:Steering wheel angle
-ArduinoJoystickWithFFBLibrary-MotorDriverFunction:Effect Data
-```
+![diagram](/pics/diag2.png)
 
 ### Schematics
 
