@@ -1,6 +1,6 @@
 # Custom Steering Wheel
 
-### Electronics
+## Electronics
 
 MadCatz xbox wheel decoding:
 
@@ -30,7 +30,7 @@ MadCatz xbox wheel decoding:
 | Brown/Black | P3 LED (active low, use resistor) |
 | Pink/Black | P4 LED (active low, use resistor) |
 
-### Theory of Operation
+## Theory of Operation
 
 -Atmega 32u4
 
@@ -46,7 +46,7 @@ Inside the ATmega32u4, the code will go something like this:
 
 ![diagram](/pics/diag2.png)
 
-### Schematics
+## Schematics
 
 [Complete Schematic (pdf)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
 
@@ -54,7 +54,7 @@ Inside the ATmega32u4, the code will go something like this:
 
 Note: 12V net port is not actually 12V
 
-#### H bridge Driver
+### H bridge Driver
 
 This is a basic H bridge driver, supports PWM. Only thing is that there is absolutely no circuit protection, so should both analog pwm inputs be active, the HEXFETS will be no more.
 
@@ -66,13 +66,13 @@ I simulated the circuit in [circuitmod](https://sourceforge.net/projects/circuit
 
 The non-full voltage swing across the 10 ohm is caused by the limitation of the simulator's mosfet model. Putting another one in parallel solves this issue, by using a more appropriate MOSFET in the final design will be a better solution
 
-#### Power supply
+### Power supply
 
 The drill is a 120V drill. Running it on 12V DC provides good Locking torque, yet lacks power to come out of a locked stall.
 
 A voltage doubler circuit would be utilized to boost the voltage to a decent amount.
 
-##### Transform calculations
+#### Transform calculations
 
 ![TrafoInductanceTest](/pics/TrafoInductanceTest.png)
 
