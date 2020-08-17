@@ -97,11 +97,11 @@ Calculations
 
 ![formula](https://render.githubusercontent.com/render/math?math=L=\frac{2%20\pi%20f}{X_L})
 
-![formula](https://render.githubusercontent.com/render/math?math=\frac{1.44V}{.36V}=\frac{X_L}{100ohm})
+![formula](https://render.githubusercontent.com/render/math?math=\frac{1.44V}{.36V}=\frac{X_L+100}{100ohm})
 
-![formula](https://render.githubusercontent.com/render/math?math=X_L=400ohm)
+![formula](https://render.githubusercontent.com/render/math?math=X_L=300ohm)
 
-![formula](https://render.githubusercontent.com/render/math?math=L=\frac{2%20\pi%20103.1hz}{400ohm}=1.62H)
+![formula](https://render.githubusercontent.com/render/math?math=L=\frac{300ohm}{2%20\pi%20103.1hz}=.463H)
 
 
 At about 14 amps, a 10,000uF capacitor will provide a 6v swing signal. Good enough for the girls I go out with
