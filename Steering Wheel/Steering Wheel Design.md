@@ -99,7 +99,7 @@ Calculations
 
 ![formula](https://render.githubusercontent.com/render/math?math=\frac{1.44V}{.36V}=\frac{X_L}{100Ω})
 
-![formula](https://render.githubusercontent.com/render/math?math=X_L=400Ω)
+![formula](https://render.githubusercontent.com/render/math?math=X_L=400ohm)
 
 ![formula](https://render.githubusercontent.com/render/math?math=L=\frac{2%20\pi%20103.1hz}{400Ω}=1.62H)
 
