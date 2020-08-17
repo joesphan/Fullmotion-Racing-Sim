@@ -64,7 +64,7 @@ The extra transistors tacked on are to create a 12V gate drive.
 
 I simulated the circuit in [circuitmod](https://sourceforge.net/projects/circuitmod/). Although I had access to MultiSim through my uni, the mentioned software is more accessible to most people and is fine.
 
-![HBridgeSimulation](C:\Users\joesp\Desktop\fullmotion racing sim\pics\HBridgeSimulation.png)
+![HBridgeSimulation](\pics\HBridgeSimulation.png)
 
 The non-full voltage swing across the 10 ohm is caused by the limitation of the simulator's mosfet model. Putting another one in parallel solves this issue, by using a more appropriate MOSFET in the final design will be a better solution
 
@@ -85,7 +85,7 @@ This at a glance seems like the worst choice, but hear me out.
 
 To get an accurate simulation, the inductance of the transformer was measured via frequency generator and oscilloscope
 
-![TrafoInductanceTest](C:\Users\joesp\Desktop\fullmotion racing sim\pics\TrafoInductanceTest.png)
+![TrafoInductanceTest](\pics\TrafoInductanceTest.png)
 
 The circuit consisted of the transformer (secondary open) and a 100 ohm resistor in series. The smaller waveform is the measurement across the resistor while a signal was applied.
 $$
@@ -110,7 +110,7 @@ $$
 
 At about 14 amps, a 10,000uF capacitor will provide a 6v swing signal. Good enough for the girls I go out with
 
-![PowerSupplySim](C:\Users\joesp\Desktop\fullmotion racing sim\pics\PowerSupplySim.png)
+![PowerSupplySim](\pics\PowerSupplySim.png)
 
 At 2 amps, the signal is a 1V swing. Nice!
 
