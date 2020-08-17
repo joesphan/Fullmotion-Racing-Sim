@@ -33,8 +33,11 @@ MadCatz xbox wheel decoding:
 ### Theory of Operation
 
 -Atmega 32u4
+
 -[FFB Library](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary) (thanks!)
+
 -drill motor for "direct drive"
+
 -old 2 bay NAS chassis for housing
 
 ```sequence
@@ -87,25 +90,19 @@ To get an accurate simulation, the inductance of the transformer was measured vi
 ![TrafoInductanceTest](/pics/TrafoInductanceTest.png)
 
 The circuit consisted of the transformer (secondary open) and a 100 ohm resistor in series. The smaller waveform is the measurement across the resistor while a signal was applied.
-$$
-X_L=2\pi f L
-$$
 
-$$
-L=\frac{2\pi f}{X_L}
-$$
+Calculations
 
-$$
-\frac{1.44V}{.36V}=\frac{X_L}{100Ω}
-$$
+![formula](https://render.githubusercontent.com/render/math?math=X_L=2%20\pi%20fL)
 
-$$
-X_L=400Ω
-$$
+![formula](https://render.githubusercontent.com/render/math?math=L=\frac{2%20\pi%20f}{X_L})
 
-$$
-L=\frac{2\pi 103.1hz}{400Ω}=1.62H
-$$
+![formula](https://render.githubusercontent.com/render/math?math=\frac{1.44V}{.36V}=\frac{X_L}{100Ω})
+
+![formula](https://render.githubusercontent.com/render/math?math=X_L=400Ω)
+
+![formula](https://render.githubusercontent.com/render/math?math=L=\frac{2%20\pi%20103.1hz}{400Ω}=1.62H)
+
 
 At about 14 amps, a 10,000uF capacitor will provide a 6v swing signal. Good enough for the girls I go out with
 
@@ -115,7 +112,7 @@ At 2 amps, the signal is a 1V swing. Nice!
 
 ![PowerSupplySimLowCurrent](/pics/PowerSupplySimLowCurrent.png)
 
-These measurements are taken at the worst case scenario. In reality, it will be PWM'd to only 8-10V, the motor is rated for 6V. 
+Measurements reflect the worst case scenarios 
 
 [Complete Schematic](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
 
