@@ -46,6 +46,10 @@ Note: 12V net port is not actually 12V
 | Brown/Black | P3 LED (active low, use resistor) |
 | Pink/Black | P4 LED (active low, use resistor) |
 
+The steering wheel will carry an onboard SPI IO expander (mcp23s17), interfacing with all the buttons.
+
+A spring cable will carry the SPI signals between the 32u4 and the wheel.
+
 ## Microcontroller Flowchart
 
 ![diagram](/pics/diag1.png)
