@@ -1,8 +1,24 @@
 # Custom Steering Wheel
 
-## Electronics
+## Theory of Operation
 
-MadCatz xbox wheel decoding:
+-Atmega 32u4
+
+-[FFB Library](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary) (thanks!)
+
+-drill motor for "direct drive"
+
+-old 2 bay NAS chassis for housing
+
+## Schematics
+
+[Complete Schematic (pdf)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
+
+[Complete Schematic (diptrace)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.dch)
+
+Note: 12V net port is not actually 12V
+
+## MadCatz xbox wheel
 
 |             Color/Stripe              |         Function         |
 | :-----------------------------------: | :----------------------: |
@@ -30,15 +46,7 @@ MadCatz xbox wheel decoding:
 | Brown/Black | P3 LED (active low, use resistor) |
 | Pink/Black | P4 LED (active low, use resistor) |
 
-## Theory of Operation
-
--Atmega 32u4
-
--[FFB Library](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary) (thanks!)
-
--drill motor for "direct drive"
-
--old 2 bay NAS chassis for housing
+## Microcontroller Flowchart
 
 ![diagram](/pics/diag1.png)
 
@@ -46,15 +54,11 @@ Inside the ATmega32u4, the code will go something like this:
 
 ![diagram](/pics/diag2.png)
 
-## Schematics
+## Rotary Encoder
 
-[Complete Schematic (pdf)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.pdf)
+To eliminate the need of any mechanical connection between the drill and parts, the cooling fan inside the motor will be replaced with a rotary encoder wheel.
 
-[Complete Schematic (diptrace)](https://github.com/joesphan/Fullmotion-Racing-Sim/blob/master/Steering%20Wheel/Controller/Schematics%20and%20simulation/FullSchematic.dch)
-
-Note: 12V net port is not actually 12V
-
-### H bridge Driver
+## H bridge Driver
 
 This is a basic H bridge driver, supports PWM. Only thing is that there is absolutely no circuit protection, so should both analog pwm inputs be active, the HEXFETS will be no more.
 
@@ -66,13 +70,13 @@ I simulated the circuit in [circuitmod](https://sourceforge.net/projects/circuit
 
 The non-full voltage swing across the 10 ohm is caused by the limitation of the simulator's mosfet model. Putting another one in parallel solves this issue, by using a more appropriate MOSFET in the final design will be a better solution
 
-### Power supply
+## Power supply
 
 The drill is a 120V drill. Running it on 12V DC provides good Locking torque, yet lacks power to come out of a locked stall.
 
 A voltage doubler circuit would be utilized to boost the voltage to a decent amount.
 
-#### Transform calculations
+### Transformer calculations
 
 ![TrafoInductanceTest](/pics/TrafoInductanceTest.png)
 
@@ -90,11 +94,7 @@ Calculations
 
 ![formula](https://render.githubusercontent.com/render/math?math=L=\frac{300ohm}{2%20\pi%20103.1hz}=.463H)
 
-##### Voltage doubler and filter simulation
+### Voltage doubler and filter simulation
 
 ![PowerSupplySim](/pics/PowerSupplySim.png)
-
-## Mechanics
-
-I conveniently found a old IOmega NAS 
 
