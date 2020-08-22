@@ -2,11 +2,17 @@
 
 ## Theory of Operation
 
+-needs to be easy to replicate on the HFT corded drill
+
 -Atmega 32u4
 
 -[FFB Library](https://github.com/YukMingLaw/ArduinoJoystickWithFFBLibrary) (thanks!)
 
 -drill motor for "direct drive"
+
+-minimize the use of 3d printed high stress components
+
+-3d print a encoder wheel and use IR sensors to implement a rotary encoder built into the motor
 
 -old 2 bay NAS chassis for housing
 
