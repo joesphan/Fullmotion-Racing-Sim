@@ -1,0 +1,12 @@
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\bin\Debug\MotionSimDriver.exe.config
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\bin\Debug\MotionSimDriver.exe
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\bin\Debug\MotionSimDriver.pdb
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\obj\Debug\MotionSimDriver.csprojAssemblyReference.cache
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\obj\Debug\MotionSimDriver.Properties.Resources.resources
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\obj\Debug\MotionSimDriver.csproj.GenerateResource.cache
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\obj\Debug\MotionSimDriver.csproj.CoreCompileInputs.cache
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\obj\Debug\MotionSimDriver.exe
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\obj\Debug\MotionSimDriver.pdb
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\obj\Debug\MotionSimDriver.Form1.resources
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\bin\Debug\Zeroit.Framework.Gauges.dll
+C:\Users\joesp\Desktop\fullmotion racing sim\Software\Driver\src\MotionSimDriver\MotionSimDriver\obj\Debug\MotionSimDriver.csproj.CopyComplete
